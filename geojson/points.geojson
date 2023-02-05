@@ -84,7 +84,7 @@
             "type": "Point",
             "coordinates": [2.537344, 42.056061]
         }
-		}, {
+	}, {
         "type": "Feature",
         "properties": {
             "id": 7,
@@ -98,7 +98,7 @@
             "type": "Point",
             "coordinates": [2.487883, 42.183444]
         }		 
-		}, {
+	}, {
         "type": "Feature",
         "properties": {
             "id": 8,
@@ -112,7 +112,7 @@
             "type": "Point",
             "coordinates": [2.481076, 42.320510]
         }		 
-		}, {
+	}, {
         "type": "Feature",
         "properties": {
             "id": 9,
@@ -126,7 +126,7 @@
             "type": "Point",
             "coordinates": [2.481269, 42.403849]
         }	
-		}, {
+	}, {
         "type": "Feature",
         "properties": {
             "id": 10,
@@ -140,7 +140,7 @@
             "type": "Point",
             "coordinates": [2.407849, 42.502543]
         }
-		}, {
+	}, {
         "type": "Feature",
         "properties": {
             "id": 11,
