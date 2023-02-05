@@ -34,6 +34,7 @@
   <div id="narration">
     <div id="contents" @scroll="scrollCont">
       <div id="space-at-the-top" class="space-at-the-top"></div>
+      <!-- ITEM TEMPLATE -->
         <div :id="'container'+stage.properties.id" :data-id="index" class="image-container" v-for="(stage, index) in stages"
              :class="(index==active) ? 'inFocus' : 'outFocus'">
           <p class="stage-header" v-html="stage.properties.stage"></p>
@@ -46,7 +47,8 @@
             </div>
           </section>
           <p class="description">{{ stage.properties.description }}</p>
-      </div>
+        </div>
+      <!-- END ITEM TEMPLATE -->
       <div class='space-at-the-bottom'>
         <a href='#space-at-the-top'>&#129029; <small>Inici</small></a>
       </div>
