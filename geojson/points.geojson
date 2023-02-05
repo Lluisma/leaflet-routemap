@@ -1,0 +1,158 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "id": 1,
+            "stage": "Mataró <small>(El Maresme)</small>",
+			"date": "20/11/2022",
+            "zoom": 15,
+			"images": [ "photo_01_a.webp", "photo_01_b.webp" ],
+            "description": "This scroll-driven routemap is built on an <a target='_blank' href='https://github.com/Lluisma/leaflet-routemap.git'>open-source Leaflet template</a>. The design is ideal for narrate on a map the different stages of a route. Or users can click any marker point to go directly to its stage."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.454664, 41.538663]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "id": 2,
+            "stage": "Collsacreu. Arenys de Munt <small>(El Maresme)</small>",
+			"date": "18/12/2022",
+            "zoom": 15,
+            "images": [ "photo_02_a.webp", "photo_02_b.webp" ],
+            "description": "Edit the points.geojson.file with the information of every point of the route (id, stage name, date and description)."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.527654, 41.626533]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "id": 3,
+            "stage": "Riells i Viabrea <small>(La Selva)</small>",
+            "date": "22/01/2023*",
+            "zoom": 15,
+            "images": ["photo_03_a.webp","photo_03_b.webp"],
+            "description": "Edit the tracks.geojson.file with the all the points that define each track."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.571050, 41.72681]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "id": 4,
+            "stage": "Arbúcies <small>(La Selva)</small>",
+            "date": "26/02/2023*",
+            "zoom": 15,
+            "images": ["photo_04_a.webp","photo_04_b.webp"],
+            "description": "You can covert your .gpx track file to .geojson format with tools like https://mygeodata.cloud/converter/gpx-to-geojson."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.528006, 41.843571]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "id": 5,
+            "stage": "Osor <small>(La Selva)</small>",
+            "date": "26/03/2023*",
+            "zoom": 15,
+            "images": ["photo_05_a.webp","photo_05_b.webp"],
+            "description": "Upload your images on local subfolder (/img') and fill the 'images' property of its corresponding item in then points.geojson file with the appropiate image names."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.557108, 41.945577]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "id": 6,
+            "stage": "Les Planes d’Hostoles <small>(La Garrotxa)</small>",
+            "date": "15/04/2023*",
+            "zoom": 15,
+            "images": ["photo_06_a.webp","photo_06_b.webp"],
+            "description": "All the images for each point are displayed in a gallery. Preview each thumbnail by clicking on it."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.537344, 42.056061]
+        }
+		}, {
+        "type": "Feature",
+        "properties": {
+            "id": 7,
+            "stage": "Olot <small>(La Garrotxa)</small>",
+            "date": "16/04/2023*",
+            "zoom": 15,
+            "images": ["photo_07_a.webp","photo_07_b.webp"],
+            "description": "If you click on the preview image, it will open in full screen."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.487883, 42.183444]
+        }		 
+		}, {
+        "type": "Feature",
+        "properties": {
+            "id": 8,
+            "stage": "Beget <small>(El Ripollès)</small>",
+            "date": "?",
+            "zoom": 15,
+            "images": ["photo_08_a.webp","photo_08_b.webp"],
+            "description": "The Leafet 1.x code includes a 'fly to' feature that animates the distance traveled from one map point to the next. Users with some coding skills can easily modify the background map, or add map overlays, or extend the code by adding new features."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.481076, 42.320510]
+        }		 
+		}, {
+        "type": "Feature",
+        "properties": {
+            "id": 9,
+            "stage": "Prats de Molló <small>(El Vallespir)</small>",
+            "date": "?",
+            "zoom": 15,
+            "images": ["photo_09_a.webp","photo_09_b.webp"],
+            "description": "It uses <a href='https://cartodb.com'>CartoDB</a> as then base layer map, but you can use other options available just by modifying the leaflet-routemap.js file."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.481269, 42.403849]
+        }	
+		}, {
+        "type": "Feature",
+        "properties": {
+            "id": 10,
+            "stage": "Refugi de Marelles. Castell de Vernet <small>(El Conflent)</small>",
+            "date": "?",
+            "zoom": 15,
+            "images": ["photo_10_a.webp","photo_10_b.webp"],
+            "description": "The Leafet 1.x code includes a 'fly to' feature that animates the distance traveled from one map point to the next. Users with some coding skills can easily modify the background map, or add map overlays, or extend the code by adding new features."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.407849, 42.502543]
+        }
+		}, {
+        "type": "Feature",
+        "properties": {
+            "id": 11,
+            "stage": "Prada <small>(El Conflent)</small>",
+            "date": "",
+            "zoom": 15,
+            "images": ["photo_11_a.webp"],
+            "description": "To learn how to create your own Leaflet storymap from this template, click on 'View code in GitHub' at the bottom of the map, or go to Leaflet Templates section of the <a href='http://DataVizForAll.org' target='_blank'>Data Visualization For All</a> book."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.423341, 42.617822]
+        }		 				 				
+    }]
+}

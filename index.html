@@ -4,48 +4,64 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
-  <title>leaflet-storymap</title>
-  <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css"/>
+  <title>GR83 - Camí del Nord</title>
+
+  <!-- Load CDN libraries (VueJS | Axios | Leaflet ) -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
-  <!-- load jQuery  -->
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <!-- load Font-Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <!-- Load leaflet.extra-markers from local directory -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css"/>
+
+  <!-- Load leaflet.extra-markers (local directory) -->
   <script src="markers/leaflet.extra-markers.min.js"></script>
   <link rel="stylesheet" href="markers/leaflet.extra-markers.min.css">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- load Lato Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="leaflet-routemap.css">
+  
+  <link rel="shortcut icon" href="#">
 </head>
 
 <body>
   <div id="title" class="title-text">
-    <h3>Insert your title here</h3>
-    <small>Scroll <i class="fa fa-chevron-down"></i></small>
+    <h3><img id="logo" src="img/logo.webp" width="14"> GR83 trlwlkrs</h3>
+    &#8675;
   </div>
 
   <div id="narration">
-    <div id="contents">
+    <div id="contents" @scroll="scrollCont">
       <div id="space-at-the-top" class="space-at-the-top"></div>
+        <div :id="'container'+stage.properties.id" :data-id="index" class="image-container" v-for="(stage, index) in stages"
+             :class="(index==active) ? 'inFocus' : 'outFocus'">
+          <p class="stage-header" v-html="stage.properties.stage"></p>
+          <p class="stage-header" v-html="stages[index + 1].properties.stage" v-if="index<(stages.length-1)"></p>
+          <p>{{ stage.properties.date}}</p>
+          <section class="gallery">
+            <img :id="'img-'+stage.properties.id" :src="stage.properties.images[0] ? 'img/' + stage.properties.images[0] : 'img/default.webp'" class="gallery__img" @click="modalImg" />
+            <div class="gallery__thumbs">
+              <img class="gallery__thumb" :src="'img/'+image" :data-parent="'img-'+stage.properties.id" v-for="image in stage.properties.images" @click="showImg" />
+            </div>
+          </section>
+          <p class="description">{{ stage.properties.description }}</p>
+      </div>
+      <div class='space-at-the-bottom'>
+        <a href='#space-at-the-top'>&#129029; <small>Inici</small></a>
+      </div>
     </div>
   </div>
 
   <div id="map"></div>
 
-  <script type="text/javascript" src="script.js"></script>
+  <div id="modal-container">
+    <span id="modal-close">&times;</span>
+    <img id="modal-image">
+    <div id="modal-caption"></div>
+  </div>
 
-  <!-- handlebars template for each individual story -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
-  <script id="container-template" type="text/x-handlebars-template">
-    <div id="{{containerId}}" class="image-container">
-      <p class="chapter-header">{{chapter}}</p>
-      <div class="img-holder">
-        <img src="{{imgSrc}}">
-      </div>
-      <a href="{{srcHref}}" target="_blank" class="source">{{srcText}}</a>
-      <p class="description">{{{description}}}</p>
-    </div>
-  </script>
+  <script type="text/javascript" src="leaflet-routemap.js"></script>
 
 </body>
 </html>
